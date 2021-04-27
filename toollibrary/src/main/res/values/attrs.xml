@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomClickBar">
+        <attr name="tvBarName" format="reference|string"/>
+        <attr name="tvBarHint" format="reference|string"/>
+        <attr name="imageRight" format="enum">
+            <enum name="visible" value="1"/>
+            <enum name="gone" value="0"/>
+        </attr>
+
+    </declare-styleable>
+
+</resources>
