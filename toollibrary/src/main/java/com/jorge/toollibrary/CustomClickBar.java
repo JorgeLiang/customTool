@@ -31,6 +31,7 @@ public class CustomClickBar extends RelativeLayout {
         init(context,attrs,defStyleAttr);
     }
 
+    //...
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
         View view = LayoutInflater.from(context).inflate(R.layout.bar_custom_click,this,true);
 
