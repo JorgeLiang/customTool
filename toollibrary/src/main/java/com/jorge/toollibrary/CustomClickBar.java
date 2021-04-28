@@ -2,7 +2,9 @@ package com.jorge.toollibrary;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,7 +33,6 @@ public class CustomClickBar extends RelativeLayout {
         init(context,attrs,defStyleAttr);
     }
 
-    //...
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
         View view = LayoutInflater.from(context).inflate(R.layout.bar_custom_click,this,true);
 
@@ -44,11 +45,15 @@ public class CustomClickBar extends RelativeLayout {
         String barName = array.getString(R.styleable.CustomClickBar_tvBarName);
         String barHint = array.getString(R.styleable.CustomClickBar_tvBarHint);
         int image_arrows = array.getInt(R.styleable.CustomClickBar_imageRight,0);
+        Drawable imageRightBackground = array.getDrawable(R.styleable.CustomClickBar_imageRightBackground);
+//        Log.d("Drawable",imageRightBackground+"");
         array.recycle();
 
         tvBarName.setText(barName);
         tvBarHint.setText(barHint);
         imageRight.setVisibility(image_arrows == 0 ? GONE : VISIBLE);
+        if (imageRightBackground != null)imageRight.setBackground(imageRightBackground);
+
     }
 
     public TextView getTvBarName() {

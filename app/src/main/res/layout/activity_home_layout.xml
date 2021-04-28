@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFEAEAEA"
+    android:orientation="vertical">
+
+    <com.jorge.toollibrary.CustomClickBar
+        android:id="@+id/ccb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tvBarName="CustomClickBar"
+        app:tvBarHint="hint"
+        app:imageRight="visible"
+        android:onClick="click_bar_click"/>
+
+    <com.jorge.toollibrary.CustomSwitchBar
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tvSwitchNameStr="CustomSwitchBar"/>
+
+
+</LinearLayout>

@@ -8,7 +8,20 @@
             <enum name="visible" value="1"/>
             <enum name="gone" value="0"/>
         </attr>
+        <attr name="imageRightBackground" format="reference"/>
 
+    </declare-styleable>
+
+    <declare-styleable name="CustomSwitchBar">
+        <attr name="tvSwitchNameStr" format="string|reference"/>
+        <attr name="swSwitch" format="enum">
+            <enum name="enable" value="1"/>
+            <enum name="disable" value="0"/>
+        </attr>
+        <attr name="pbProgressBar" format="enum">
+            <enum name="goneBar" value="0"/>
+            <enum name="visibleBar" value="1"/>
+        </attr>
     </declare-styleable>
 
 </resources>
