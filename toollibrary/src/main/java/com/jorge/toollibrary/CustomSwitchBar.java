@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.SwitchCompat;
 
+/**
+ * Created by Jorge on 4/29/21.
+ */
+
 public class CustomSwitchBar extends RelativeLayout {
     private ProgressBar pbProgressBar;
     private SwitchCompat swSwitch;

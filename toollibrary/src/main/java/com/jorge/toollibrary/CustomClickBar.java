@@ -11,6 +11,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+/**
+ * Created by Jorge on 4/29/21.
+ */
+
 public class CustomClickBar extends RelativeLayout {
 
     private TextView tvBarName;

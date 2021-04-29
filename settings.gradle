@@ -1,3 +1,4 @@
+include ':loglibrary'
 include ':toollibrary'
 include ':app'
 rootProject.name = "customTool"

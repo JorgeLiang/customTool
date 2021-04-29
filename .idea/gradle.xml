@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/loglibrary" />
             <option value="$PROJECT_DIR$/toollibrary" />
           </set>
         </option>
