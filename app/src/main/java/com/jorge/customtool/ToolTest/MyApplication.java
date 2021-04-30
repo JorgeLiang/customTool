@@ -14,7 +14,7 @@ public class MyApplication extends Application {
         super.onCreate();
         String path = Environment.getExternalStorageDirectory()
                 + File.separator + "GeneralLog";
-        String fileName = "generalName";
+        String fileName = "generalName_ta";
         KLogHandler.getInstance().initHandler(path,fileName);
     }
 }

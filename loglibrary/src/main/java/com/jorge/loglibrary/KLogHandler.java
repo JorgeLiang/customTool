@@ -123,7 +123,7 @@ public class KLogHandler {
                 if (isCreate){
 
                     //超过指定大小 创建新txt文件
-                    String numStr = StringUtils.cutMiddleString_v2("_",".",lastFile.getName());
+                    String numStr = StringUtils.cutMiddleString("_",".",lastFile.getName());
                     int num = Integer.parseInt(numStr);
                     KLog.file(TAG,new File(kLogPath),getLogFileName(num+1),obj,true);
                     KLogFileName = getLogFileName(num+1);
