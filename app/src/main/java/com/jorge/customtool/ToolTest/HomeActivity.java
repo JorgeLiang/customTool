@@ -1,11 +1,13 @@
 package com.jorge.customtool.ToolTest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import com.jorge.customtool.R;
+import com.jorge.customtool.ToolTest.recyclerViewHeaderFooder.MultipleRecyclerActiviy;
 import com.jorge.customtool.ToolTest.utils.PermissionUtils;
 import com.jorge.loglibrary.KLogHandler;
 
@@ -39,5 +41,7 @@ public class HomeActivity extends BaseActivity{
     }
 
 
-
+    public void recycleView_click(View view) {
+        startActivity(new Intent(this, MultipleRecyclerActiviy.class));
+    }
 }

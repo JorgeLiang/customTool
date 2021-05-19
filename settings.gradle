@@ -1,3 +1,4 @@
+include ':multiple-recyclerview'
 include ':loglibrary'
 include ':toollibrary'
 include ':app'
