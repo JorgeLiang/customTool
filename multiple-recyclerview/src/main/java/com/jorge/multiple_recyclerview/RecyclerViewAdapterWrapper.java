@@ -42,32 +42,38 @@ public class RecyclerViewAdapterWrapper extends RecyclerView.Adapter {
         this.wrapped.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
             public void onChanged() {
-                super.onChanged();
+//                super.onChanged();
+                notifyDataSetChanged();
             }
 
             @Override
             public void onItemRangeChanged(int positionStart, int itemCount) {
-                super.onItemRangeChanged(positionStart, itemCount);
+//                super.onItemRangeChanged(positionStart, itemCount);
+                notifyItemRangeChanged(positionStart, itemCount);
             }
 
             @Override
             public void onItemRangeChanged(int positionStart, int itemCount, @Nullable Object payload) {
-                super.onItemRangeChanged(positionStart, itemCount, payload);
+//                super.onItemRangeChanged(positionStart, itemCount, payload);
+                notifyItemRangeChanged(positionStart, itemCount, payload);
             }
 
             @Override
             public void onItemRangeInserted(int positionStart, int itemCount) {
-                super.onItemRangeInserted(positionStart, itemCount);
+//                super.onItemRangeInserted(positionStart, itemCount);
+                notifyItemRangeInserted(positionStart, itemCount);
             }
 
             @Override
             public void onItemRangeRemoved(int positionStart, int itemCount) {
-                super.onItemRangeRemoved(positionStart, itemCount);
+//                super.onItemRangeRemoved(positionStart, itemCount);
+                notifyItemRangeRemoved(positionStart, itemCount);
             }
 
             @Override
             public void onItemRangeMoved(int fromPosition, int toPosition, int itemCount) {
-                super.onItemRangeMoved(fromPosition, toPosition, itemCount);
+//                super.onItemRangeMoved(fromPosition, toPosition, itemCount);
+                notifyItemMoved(fromPosition, toPosition);
             }
         });
     }
