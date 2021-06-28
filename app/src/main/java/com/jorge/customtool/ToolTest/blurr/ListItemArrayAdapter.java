@@ -28,9 +28,9 @@ public class ListItemArrayAdapter extends ArrayAdapter<ListItemData> {
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
-            ImageView image = (ImageView) convertView.findViewById(R.id.image);
-            TextView title = (TextView) convertView.findViewById(R.id.title);
-            TextView description = (TextView) convertView.findViewById(R.id.description);
+            ImageView image = convertView.findViewById(R.id.image);
+            TextView title = convertView.findViewById(R.id.title);
+            TextView description = convertView.findViewById(R.id.description);
 
             holder = new ViewHolder();
             holder.image = image;
