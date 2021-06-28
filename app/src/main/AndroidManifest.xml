@@ -25,6 +25,8 @@
         </activity>
 
         <activity android:name=".ToolTest.recyclerViewHeaderFooder.MultipleRecyclerActiviy"/>
+        <activity android:name="com.jorge.customtool.ToolTest.blurr.BlurrActivity"/>
+
     </application>
 
 </manifest>

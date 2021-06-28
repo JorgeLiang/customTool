@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#4FDC9F"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#D330C3"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#4FDC9F"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#2776D8"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--        <ListView-->
+            <!--            android:id="@+id/list_view"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent">-->
+            <!--        </ListView>-->
+            <!--        -->
+            <ImageView
+                android:id="@+id/view_test"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/froyo"/>
+
+            <TextView
+                android:id="@+id/tv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="test"
+                android:textSize="30dp"
+                android:textColor="@color/white"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.jorge.squareblur.BlurringView
+        android:id="@id/blurring_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:overlayColor="@color/transparent"
+        app:debug="true"/>
+
+</FrameLayout>

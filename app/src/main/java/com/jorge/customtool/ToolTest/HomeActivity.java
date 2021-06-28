@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import com.jorge.customtool.R;
+import com.jorge.customtool.ToolTest.blurr.BlurrActivity;
 import com.jorge.customtool.ToolTest.recyclerViewHeaderFooder.MultipleRecyclerActiviy;
 import com.jorge.customtool.ToolTest.utils.PermissionUtils;
 import com.jorge.loglibrary.KLogHandler;
@@ -37,11 +38,14 @@ public class HomeActivity extends BaseActivity{
             Toast.makeText(this, tCount+",,", Toast.LENGTH_SHORT).show();
             KLogHandler.getInstance().setLog("click:" + tCount);
         }
-
     }
-
 
     public void recycleView_click(View view) {
         startActivity(new Intent(this, MultipleRecyclerActiviy.class));
+    }
+
+    /**背景模糊**/
+    public void btn_blurr(View view) {
+        startActivity(new Intent(this, BlurrActivity.class));
     }
 }

@@ -1,3 +1,4 @@
+include ':squareblur'
 include ':multiple-recyclerview'
 include ':loglibrary'
 include ':toollibrary'

@@ -27,4 +27,10 @@
         android:text="recycleView-header-footer"
         android:onClick="recycleView_click"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="blurr"
+        android:onClick="btn_blurr"/>
+
 </LinearLayout>
