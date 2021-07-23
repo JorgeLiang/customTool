@@ -1,3 +1,4 @@
+include ':photoAlbum'
 include ':squareblur'
 include ':multiple-recyclerview'
 include ':loglibrary'

@@ -8,9 +8,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import com.jorge.customtool.R;
 import com.jorge.customtool.ToolTest.blurr.BlurrActivity;
+import com.jorge.customtool.ToolTest.photo_album.PhotoAlbumActivity;
 import com.jorge.customtool.ToolTest.recyclerViewHeaderFooder.MultipleRecyclerActiviy;
 import com.jorge.customtool.ToolTest.utils.PermissionUtils;
 import com.jorge.loglibrary.KLogHandler;
+
+import java.lang.ref.PhantomReference;
 
 /**
  * Created by Jorge on 4/29/21.
@@ -47,5 +50,9 @@ public class HomeActivity extends BaseActivity{
     /**背景模糊**/
     public void btn_blurr(View view) {
         startActivity(new Intent(this, BlurrActivity.class));
+    }
+
+    public void photo_album(View view) {
+        startActivity(new Intent(this, PhotoAlbumActivity.class));
     }
 }

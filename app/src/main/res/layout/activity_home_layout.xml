@@ -35,4 +35,11 @@
         android:onClick="btn_blurr"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="photo_album"
+        android:onClick="photo_album"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

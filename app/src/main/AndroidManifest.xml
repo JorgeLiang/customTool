@@ -26,6 +26,7 @@
 
         <activity android:name=".ToolTest.recyclerViewHeaderFooder.MultipleRecyclerActiviy"/>
         <activity android:name="com.jorge.customtool.ToolTest.blurr.BlurrActivity"/>
+        <activity android:name="com.jorge.customtool.ToolTest.photo_album.PhotoAlbumActivity"/>
 
     </application>
 
