@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Jorge on 7/23/21.
  */
 
-public class PhotoAlbumBean implements Serializable {
+public class AlbumBean implements Serializable {
 
     private static final long serialVersionUID = -6667566793677558444L;
     private String topPicturePath;      //文件夹的第一张图片路径

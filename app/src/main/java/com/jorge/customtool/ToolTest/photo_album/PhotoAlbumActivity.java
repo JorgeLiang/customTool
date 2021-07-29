@@ -10,7 +10,7 @@ import com.jorge.customtool.ToolTest.BaseActivity;
 import com.jorge.customtool.ToolTest.utils.PermissionUtils;
 import com.jorge.photoalbum.PickPictureCallback;
 import com.jorge.photoalbum.PickPictureHelper;
-import com.jorge.photoalbum.PhotoAlbumBean;
+import com.jorge.photoalbum.AlbumBean;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class PhotoAlbumActivity extends BaseActivity {
             }
 
             @Override
-            public void onSuccess(List<PhotoAlbumBean> list) {
+            public void onSuccess(List<AlbumBean> list) {
                 Log.d(TAG,"readPicture onSuccess : " + list.size());
             }
 

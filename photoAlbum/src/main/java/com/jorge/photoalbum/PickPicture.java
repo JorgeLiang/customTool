@@ -25,7 +25,7 @@ public class PickPicture {
     private static final String TAG = "PickPicture : ";
     private Context mContext;
     private HashMap<String, List<String>> mGroupMap = new HashMap<>();
-    private List<PhotoAlbumBean> mPictureItems = new ArrayList<>();
+    private List<AlbumBean> mPictureItems = new ArrayList<>();
     private PickPictureThread mThread;
     private PickPictureHandler mHandler;
     private PickPictureCallback mCallback;
@@ -165,15 +165,15 @@ public class PickPicture {
      * @param groupMap
      * @return
      */
-    private List<PhotoAlbumBean> subGroupOfPicture(HashMap<String, List<String>> groupMap) {
-        List<PhotoAlbumBean> list = new ArrayList<>();
+    private List<AlbumBean> subGroupOfPicture(HashMap<String, List<String>> groupMap) {
+        List<AlbumBean> list = new ArrayList<>();
         if (groupMap.size() == 0) {
             return list;
         }
         Iterator<Map.Entry<String, List<String>>> it = groupMap.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<String, List<String>> entry = it.next();
-            PhotoAlbumBean pictureTotal = new PhotoAlbumBean();
+            AlbumBean pictureTotal = new AlbumBean();
             String key = entry.getKey();
             List<String> value = entry.getValue();
             SortPictureList sortList = new SortPictureList();
@@ -196,7 +196,7 @@ public class PickPicture {
         List<String> childList = new ArrayList<>();
         if (mPictureItems.size() == 0)
             return childList;
-        PhotoAlbumBean pictureTotal = mPictureItems.get(position);
+        AlbumBean pictureTotal = mPictureItems.get(position);
         childList = mGroupMap.get(pictureTotal.getFolderPath());
         SortPictureList sortList = new SortPictureList();
         Collections.sort(childList, sortList);
