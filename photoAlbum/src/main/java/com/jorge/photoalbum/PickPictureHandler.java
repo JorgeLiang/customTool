@@ -23,7 +23,7 @@ public class PickPictureHandler extends Handler {
     public void handleMessage(Message msg) {
         switch (msg.what) {
             case SCAN_OK:
-                List<PictureTotal> list = (List<PictureTotal>) msg.obj;
+                List<PhotoAlbumBean> list = (List<PhotoAlbumBean>) msg.obj;
                 mCallback.onSuccess(list);
                 break;
             case SCAN_ERROR:

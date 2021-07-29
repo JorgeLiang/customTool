@@ -9,7 +9,7 @@ import java.util.List;
 public interface PickPictureCallback {
     void onStart();
 
-    void onSuccess(List<PictureTotal> list);
+    void onSuccess(List<PhotoAlbumBean> list);
 
     void onError();
 }

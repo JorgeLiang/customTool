@@ -25,7 +25,7 @@ public class PickPicture {
     private static final String TAG = "PickPicture : ";
     private Context mContext;
     private HashMap<String, List<String>> mGroupMap = new HashMap<>();
-    private List<PictureTotal> mPictureItems = new ArrayList<>();
+    private List<PhotoAlbumBean> mPictureItems = new ArrayList<>();
     private PickPictureThread mThread;
     private PickPictureHandler mHandler;
     private PickPictureCallback mCallback;
@@ -165,15 +165,15 @@ public class PickPicture {
      * @param groupMap
      * @return
      */
-    private List<PictureTotal> subGroupOfPicture(HashMap<String, List<String>> groupMap) {
-        List<PictureTotal> list = new ArrayList<>();
+    private List<PhotoAlbumBean> subGroupOfPicture(HashMap<String, List<String>> groupMap) {
+        List<PhotoAlbumBean> list = new ArrayList<>();
         if (groupMap.size() == 0) {
             return list;
         }
         Iterator<Map.Entry<String, List<String>>> it = groupMap.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<String, List<String>> entry = it.next();
-            PictureTotal pictureTotal = new PictureTotal();
+            PhotoAlbumBean pictureTotal = new PhotoAlbumBean();
             String key = entry.getKey();
             List<String> value = entry.getValue();
             SortPictureList sortList = new SortPictureList();
@@ -184,7 +184,7 @@ public class PickPicture {
 
             pictureTotal.setFolderName(key.substring(key.lastIndexOf("/") + 1));
             pictureTotal.setFolderPath(key);
-
+            pictureTotal.setPhotoPathList(value);
             pictureTotal.setPictureCount(value.size());
             pictureTotal.setTopPicturePath(value.get(0));//获取该组的第一张图片
             list.add(pictureTotal);
@@ -196,7 +196,7 @@ public class PickPicture {
         List<String> childList = new ArrayList<>();
         if (mPictureItems.size() == 0)
             return childList;
-        PictureTotal pictureTotal = mPictureItems.get(position);
+        PhotoAlbumBean pictureTotal = mPictureItems.get(position);
         childList = mGroupMap.get(pictureTotal.getFolderPath());
         SortPictureList sortList = new SortPictureList();
         Collections.sort(childList, sortList);

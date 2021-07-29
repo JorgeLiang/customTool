@@ -1,23 +1,16 @@
 package com.jorge.customtool.ToolTest.photo_album;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 
 import com.jorge.customtool.R;
 import com.jorge.customtool.ToolTest.BaseActivity;
 import com.jorge.customtool.ToolTest.utils.PermissionUtils;
-import com.jorge.photoalbum.PickPicture;
 import com.jorge.photoalbum.PickPictureCallback;
 import com.jorge.photoalbum.PickPictureHelper;
-import com.jorge.photoalbum.PictureTotal;
+import com.jorge.photoalbum.PhotoAlbumBean;
 
 import java.util.List;
 
@@ -43,7 +36,7 @@ public class PhotoAlbumActivity extends BaseActivity {
             }
 
             @Override
-            public void onSuccess(List<PictureTotal> list) {
+            public void onSuccess(List<PhotoAlbumBean> list) {
                 Log.d(TAG,"readPicture onSuccess : " + list.size());
             }
 
